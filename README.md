@@ -13,7 +13,8 @@ Note I still use Shopify's Google & YouTube Channel to connect to Merchant Cente
 
 1. Create a new Custom Pixel.
 2. Copy and paste the code in to the pixel.
-3. Save and connect the pixel.
+3. Replace '&lt;your tag here&gt;' with your GTM tag id.
+4. Save and connect the pixel.
 
 ### Google Tag Manager
 
