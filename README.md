@@ -4,8 +4,12 @@ A comprehensive Google Tag Manager pixel for Shopify to track Google Analytics a
 ## Introduction
 
 This is an alternative to using the Shopify built-in Google & YouTube Channel to send Google Analytics 4 and Google Ads events.
+
 This pixel for Shopify will feed Google Analytics 4 and Google Ads compatible ecommerce data to Google Tag Manager.
+
 Note I still use Shopify's Google & YouTube Channel to connect to Merchant Center, but leave the Google Analytics 4 and Google Ads connections disabled as I could never get them to to work satisfactorily.
+
+Updates and suggestions most welcome!
 
 ## Installation
 
