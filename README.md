@@ -43,6 +43,7 @@ Updates and suggestions most welcome!
 | add_to_cart               | add_to_cart              | Custom Event | All Custom Events |
 | begin_checkout            | begin_checkout           | Custom Event | All Custom Events |
 | purchase                  | purchase                 | Custom Event | All Custom Events |
+| view_cart                 | view_cart                | Custom Event | All Custom Events |
 
 #### Google Analytics GA4 Event Tags
 
@@ -65,6 +66,9 @@ Updates and suggestions most welcome!
 |                      |                | shipping = {{Ecommerce Shipping}}             |                 |
 |                      |                | currency = {{Ecommerce Currency}}             |                 |
 |                      |                | coupon = {{Ecommerce Coupon}}                 |                 |
+| GA4 - view_cart      | view_cart      | currency = {{Ecommerce Currency}}             | view_cart       |
+|                      |                | value = {{Ecommerce Value}}                   |                 |
+|                      |                | items = {{Ecommerce Items}}                   |                 |
 
 #### Google Ads Conversion Tracking Tags
 
