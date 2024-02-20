@@ -146,3 +146,11 @@ analytics.subscribe("collection_viewed", (event) => {
     items: collection?.productVariants?.map(itemFromVariant),
   });
 });
+
+analytics.subscribe("search_submitted", (event) => {
+  const searchResult = event.data?.searchResult;
+
+  pushEcommerceData("search", event, {
+    search_term: searchResult?.query,
+  });
+});

@@ -35,6 +35,7 @@ Updates and suggestions most welcome!
 | Ecommerce Value           | ecommerce.value          | Data Layer Variable |
 | Ecommerce Item List ID    | ecommerce.item_list_id   | Data Layer Variable |
 | Ecommerce Item List Name  | ecommerce.item_list_name | Data Layer Variable |
+| Ecommerce Search Term     | ecommerce.search_term    | Data Layer Variable |
 | Event ID                  | id                       | Data Layer Variable |
 
 #### Triggers
@@ -47,6 +48,7 @@ Updates and suggestions most welcome!
 | purchase                  | purchase                 | Custom Event | All Custom Events |
 | view_cart                 | view_cart                | Custom Event | All Custom Events |
 | view_item_list            | view_item_list           | Custom Event | All Custom Events |
+| search                    | search                   | Custom Event | All Custom Events |
 
 #### Google Analytics GA4 Event Tags
 
@@ -75,6 +77,7 @@ Updates and suggestions most welcome!
 | GA4 - view_item_list | view_item_list | item_list_id = {{Ecommerce Item List ID}}     | view_item_list  |
 |                      |                | item_list_name = {{Ecommerce Item List Name}} |                 |
 |                      |                | items = {{Ecommerce Items}}                   |                 |
+| GA4 - search         | search         | search_term = {{Ecommerce Search Term}}       | search          |
 
 #### Google Ads Conversion Tracking Tags
 
