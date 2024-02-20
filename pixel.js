@@ -102,6 +102,22 @@ analytics.subscribe("product_added_to_cart", (event) => {
   });
 });
 
+analytics.subscribe("product_removed_from_cart", (event) => {
+  const cartLine = event.data?.cartLine;
+  const variant = cartLine?.merchandise;
+
+  pushEcommerceData("remove_from_cart", event, {
+    currency: cartLine?.cost?.totalAmount?.currencyCode,
+    value: cartLine?.cost?.totalAmount?.amount,
+    items: [
+      {
+        ...itemFromVariant(variant),
+        quantity: cartLine?.quantity,
+      },
+    ],
+  });
+});
+
 analytics.subscribe("checkout_started", (event) => {
   const checkout = event.data?.checkout;
 

@@ -44,6 +44,7 @@ Updates and suggestions most welcome!
 | ------------------------- | ------------------------ | ------------ | ----------------- |
 | view_item                 | view_item                | Custom Event | All Custom Events |
 | add_to_cart               | add_to_cart              | Custom Event | All Custom Events |
+| remove_from_cart          | remove_from_cart         | Custom Event | All Custom Events |
 | begin_checkout            | begin_checkout           | Custom Event | All Custom Events |
 | purchase                  | purchase                 | Custom Event | All Custom Events |
 | view_cart                 | view_cart                | Custom Event | All Custom Events |
@@ -52,32 +53,35 @@ Updates and suggestions most welcome!
 
 #### Google Analytics GA4 Event Tags
 
-| Name                 | Event Name     | Event Parameters                              | Firing Triggers |
-| -------------------- | -------------- | --------------------------------------------- | --------------- |
-| GA4 - view_item      | view_item      | currency = {{Ecommerce Currency}}             | view_item       |
-|                      |                | value = {{Ecommerce Value}}                   |                 |
-|                      |                | items = {{Ecommerce Items}}                   |                 |
-| GA4 - add_to_cart    | add_to_cart    | currency = {{Ecommerce Currency}}             | add_to_cart     |
-|                      |                | value = {{Ecommerce Value}}                   |                 |
-|                      |                | items = {{Ecommerce Items}}                   |                 |
-| GA4 - begin_checkout | begin_checkout | currency = {{Ecommerce Currency}}             | begin_checkout  |
-|                      |                | value = {{Ecommerce Value}}                   |                 |
-|                      |                | items = {{Ecommerce Items}}                   |                 |
-|                      |                | coupon = {{Ecommerce Coupon}}                 |                 |
-| GA4 - purchase       | purchase       | items = {{Ecommerce Items}}                   | purchase        |
-|                      |                | transaction_id = {{Ecommerce Transaction ID}} |                 |
-|                      |                | value = {{Ecommerce Value}}                   |                 |
-|                      |                | tax = {{Ecommerce Tax}}                       |                 |
-|                      |                | shipping = {{Ecommerce Shipping}}             |                 |
-|                      |                | currency = {{Ecommerce Currency}}             |                 |
-|                      |                | coupon = {{Ecommerce Coupon}}                 |                 |
-| GA4 - view_cart      | view_cart      | currency = {{Ecommerce Currency}}             | view_cart       |
-|                      |                | value = {{Ecommerce Value}}                   |                 |
-|                      |                | items = {{Ecommerce Items}}                   |                 |
-| GA4 - view_item_list | view_item_list | item_list_id = {{Ecommerce Item List ID}}     | view_item_list  |
-|                      |                | item_list_name = {{Ecommerce Item List Name}} |                 |
-|                      |                | items = {{Ecommerce Items}}                   |                 |
-| GA4 - search         | search         | search_term = {{Ecommerce Search Term}}       | search          |
+| Name                   | Event Name       | Event Parameters                              | Firing Triggers      |
+| ---------------------- | ---------------- | --------------------------------------------- | -------------------- |
+| GA4 - view_item        | view_item        | currency = {{Ecommerce Currency}}             | view_item            |
+|                        |                  | value = {{Ecommerce Value}}                   |                      |
+|                        |                  | items = {{Ecommerce Items}}                   |                      |
+| GA4 - add_to_cart      | add_to_cart      | currency = {{Ecommerce Currency}}             | add_to_cart          |
+|                        |                  | value = {{Ecommerce Value}}                   |                      |
+|                        |                  | items = {{Ecommerce Items}}                   |                      |
+| GA4 - remove_from_cart | remove_from_cart | currency = {{Ecommerce Currency}}             | remove_from_cart     |
+|                        |                  | value = {{Ecommerce Value}}                   |                      |
+|                        |                  | items = {{Ecommerce Items}}                   |                      |
+| GA4 - begin_checkout   | begin_checkout   | currency = {{Ecommerce Currency}}             | begin_checkout       |
+|                        |                  | value = {{Ecommerce Value}}                   |                      |
+|                        |                  | items = {{Ecommerce Items}}                   |                      |
+|                        |                  | coupon = {{Ecommerce Coupon}}                 |                      |
+| GA4 - purchase         | purchase         | items = {{Ecommerce Items}}                   | purchase             |
+|                        |                  | transaction_id = {{Ecommerce Transaction ID}} |                      |
+|                        |                  | value = {{Ecommerce Value}}                   |                      |
+|                        |                  | tax = {{Ecommerce Tax}}                       |                      |
+|                        |                  | shipping = {{Ecommerce Shipping}}             |                      |
+|                        |                  | currency = {{Ecommerce Currency}}             |                      |
+|                        |                  | coupon = {{Ecommerce Coupon}}                 |                      |
+| GA4 - view_cart        | view_cart        | currency = {{Ecommerce Currency}}             | view_cart            |
+|                        |                  | value = {{Ecommerce Value}}                   |                      |
+|                        |                  | items = {{Ecommerce Items}}                   |                      |
+| GA4 - view_item_list   | view_item_list   | item_list_id = {{Ecommerce Item List ID}}     | view_item_list       |
+|                        |                  | item_list_name = {{Ecommerce Item List Name}} |                      |
+|                        |                  | items = {{Ecommerce Items}}                   |                      |
+| GA4 - search           | search           | search_term = {{Ecommerce Search Term}}       | search               |
 
 #### Google Ads Conversion Tracking Tags
 
