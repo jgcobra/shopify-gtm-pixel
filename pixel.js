@@ -136,3 +136,13 @@ analytics.subscribe("cart_viewed", (event) => {
     items: cart?.lines?.map(itemFromCartLine),
   });
 });
+
+analytics.subscribe("collection_viewed", (event) => {
+  const collection = event.data?.collection;
+
+  pushEcommerceData("view_item_list", event, {
+    item_list_id: collection?.id,
+    item_list_name: collection?.title,
+    items: collection?.productVariants?.map(itemFromVariant),
+  });
+});

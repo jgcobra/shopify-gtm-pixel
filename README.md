@@ -33,6 +33,8 @@ Updates and suggestions most welcome!
 | Ecommerce Tax             | ecommerce.tax            | Data Layer Variable |
 | Ecommerce Transaction ID  | ecommerce.transaction_id | Data Layer Variable |
 | Ecommerce Value           | ecommerce.value          | Data Layer Variable |
+| Ecommerce Item List ID    | ecommerce.item_list_id   | Data Layer Variable |
+| Ecommerce Item List Name  | ecommerce.item_list_name | Data Layer Variable |
 | Event ID                  | id                       | Data Layer Variable |
 
 #### Triggers
@@ -44,6 +46,7 @@ Updates and suggestions most welcome!
 | begin_checkout            | begin_checkout           | Custom Event | All Custom Events |
 | purchase                  | purchase                 | Custom Event | All Custom Events |
 | view_cart                 | view_cart                | Custom Event | All Custom Events |
+| view_item_list            | view_item_list           | Custom Event | All Custom Events |
 
 #### Google Analytics GA4 Event Tags
 
@@ -68,6 +71,9 @@ Updates and suggestions most welcome!
 |                      |                | coupon = {{Ecommerce Coupon}}                 |                 |
 | GA4 - view_cart      | view_cart      | currency = {{Ecommerce Currency}}             | view_cart       |
 |                      |                | value = {{Ecommerce Value}}                   |                 |
+|                      |                | items = {{Ecommerce Items}}                   |                 |
+| GA4 - view_item_list | view_item_list | item_list_id = {{Ecommerce Item List ID}}     | view_item_list  |
+|                      |                | item_list_name = {{Ecommerce Item List Name}} |                 |
 |                      |                | items = {{Ecommerce Items}}                   |                 |
 
 #### Google Ads Conversion Tracking Tags
