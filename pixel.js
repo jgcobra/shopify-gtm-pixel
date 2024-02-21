@@ -11,27 +11,39 @@ const gtmTag = "<your tag here>";
   f.parentNode.insertBefore(j, f);
 })(window, document, "script", "dataLayer", gtmTag);
 
-function pushEcommerceData(eventName, srcEvent, ecommerceData) {
+function pushGenericData(eventName, srcEvent, data) {
+  const doc = srcEvent.context.document;
+
+  const newData = {
+    event: eventName,
+    timestamp: srcEvent.timestamp,
+    id: srcEvent.id,
+    user_id: srcEvent.clientId,
+    page_location: doc.location.href,
+    page_title: doc.title,
+    ...data,
+  };
+
   console.log("Detected event:", srcEvent.name);
   console.table(srcEvent);
   console.log("Pushing event:", eventName);
-  console.table(ecommerceData);
-  console.log("Items:", ecommerceData?.items?.length ?? 0);
-  console.table(ecommerceData?.items);
+  console.table(newData);
 
+  window.dataLayer.push(newData);
+}
+
+function pushEcommerceData(eventName, srcEvent, ecommerceData) {
   // Clear the previous ecommerce object
   // Prevents multiple ecommerce events on a page from affecting each other
   window.dataLayer.push({ ecommerce: null });
 
   // Push the new ecommerce object
-  window.dataLayer.push({
-    event: eventName,
-    timestamp: srcEvent.timestamp,
-    id: srcEvent.id,
-    user_id: srcEvent.clientId,
-    url: srcEvent.context.document.location.href,
+  pushGenericData(eventName, srcEvent, {
     ecommerce: ecommerceData,
   });
+
+  console.log("Items:", ecommerceData?.items?.length ?? 0);
+  console.table(ecommerceData?.items);
 }
 
 function itemFromVariant(variant) {
@@ -70,6 +82,10 @@ function itemFromCartLine(lineItem) {
     quantity: lineItem?.quantity ?? 1,
   };
 }
+
+analytics.subscribe("page_viewed", (event) => {
+  pushGenericData("page_view", event, {});
+});
 
 analytics.subscribe("product_viewed", (event) => {
   const variant = event.data.productVariant;

@@ -37,11 +37,14 @@ Updates and suggestions most welcome!
 | Ecommerce Item List Name  | ecommerce.item_list_name | Data Layer Variable |
 | Ecommerce Search Term     | ecommerce.search_term    | Data Layer Variable |
 | Event ID                  | id                       | Data Layer Variable |
+| Page Location             | page_location            | Data Layer Variable |
+| Page Title                | page_title               | Data Layer Variable |
 
 #### Triggers
 
 | Trigger Name              | Event Name               | Trigger Type | Fires On          |
 | ------------------------- | ------------------------ | ------------ | ----------------- |
+| page_view                 | page_view                | Custom Event | All Custom Events |
 | view_item                 | view_item                | Custom Event | All Custom Events |
 | add_to_cart               | add_to_cart              | Custom Event | All Custom Events |
 | remove_from_cart          | remove_from_cart         | Custom Event | All Custom Events |
@@ -55,6 +58,8 @@ Updates and suggestions most welcome!
 
 | Name                   | Event Name       | Event Parameters                              | Firing Triggers      |
 | ---------------------- | ---------------- | --------------------------------------------- | -------------------- |
+| GA4 - page_view        | page_view        | page_location = {{Page Location}}             | page_view            |
+|                        |                  | page_title = {{Page Title}}                   |                      |
 | GA4 - view_item        | view_item        | currency = {{Ecommerce Currency}}             | view_item            |
 |                        |                  | value = {{Ecommerce Value}}                   |                      |
 |                        |                  | items = {{Ecommerce Items}}                   |                      |
