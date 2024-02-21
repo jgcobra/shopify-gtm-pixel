@@ -186,3 +186,26 @@ analytics.subscribe("search_submitted", (event) => {
     search_term: searchResult?.query,
   });
 });
+
+analytics.subscribe("checkout_shipping_info_submitted", (event) => {
+  const checkout = event.data?.checkout;
+  const shippingLine = checkout?.shippingLine;
+
+  pushEcommerceData("add_shipping_info", event, {
+    currency: shippingLine?.price?.currencyCode,
+    value: shippingLine?.price?.amount,
+    coupon: checkout?.discountApplications?.[0]?.title,
+    items: checkout?.lineItems?.map(itemFromCheckoutLineItem),
+  });
+});
+
+analytics.subscribe("payment_info_submitted", (event) => {
+  const checkout = event.data?.checkout;
+
+  pushEcommerceData("add_payment_info", event, {
+    currency: checkout?.currencyCode,
+    value: checkout?.totalPrice?.amount,
+    coupon: checkout?.discountApplications?.[0]?.title,
+    items: checkout?.lineItems.map(itemFromCheckoutLineItem),
+  });
+});
